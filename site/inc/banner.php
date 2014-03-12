@@ -1,0 +1,1 @@
+<div id="banner"><img src="/images/fake/leaderboard.jpg" width="728" height="90" alt="Publicidade" title="Publicidade" /></div>

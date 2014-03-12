@@ -1,0 +1,3 @@
+<!--<div class="banner-square"><a href="#" title="Título do Banner"><img src="/images/fake/square.jpg" width="120" height="90" alt="Título do Banner" title="Título do Banner" /></a></div>
+<div class="banner-square"><a href="#" title="Título do Banner"><img src="/images/fake/square.jpg" width="120" height="90" alt="Título do Banner" title="Título do Banner" /></a></div>
+<div class="banner-square"><a href="#" title="Título do Banner"><img src="/images/fake/square.jpg" width="120" height="90" alt="Título do Banner" title="Título do Banner" /></a></div>-->
