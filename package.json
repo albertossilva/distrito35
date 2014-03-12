@@ -1,4 +1,7 @@
 {
-  "name": "site-35distrito",
-  "description": "Site do 35º Distrito Escoteiro / SP"
+	"name": "site-35distrito",
+	"description": "Site do 35º Distrito Escoteiro / SP",
+	"scripts": {
+		"start": "node scripts/web-server.js"
+	}
 }
