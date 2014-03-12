@@ -6,15 +6,16 @@ var util = require('util'),
 		url = require('url'),
 		events = require('events');
 
-util.puts = function() {}
-
 var DEFAULT_PORT = 8000;
 
 function main(argv) {
-	new HttpServer({
+	var httpPort = process.env.PORT || DEFAULT_PORT;
+
+	var server = new HttpServer({
 		'GET': createServlet(StaticServlet),
 		'HEAD': createServlet(StaticServlet)
-	}).start(process.env.PORT || DEFAULT_PORT);
+	})
+	server.start(httpPort);
 }
 
 function escapeHtml(value) {
