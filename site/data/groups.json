@@ -1,0 +1,124 @@
+[
+	{
+		"number": 66, 
+		"name": "G.E. Amizade - 66º/SP", 
+		"logoUrl": "http://www.escoteiros.org.br/images/grupos_escoteiros/SP66.jpg",
+		"foundation": "24/09/1967", 
+		"address": "Rua Kenzo Kajita, 272 Parque Mauá, Taubaté",
+		"phone": "(12) 3622-7084",
+		"workTime": "Sábados - das 14:30h às 17:30h",
+		"siteUrl": "http://www.geamizade.org.br/",
+		"email": "contato@geamizade.org.br",
+		"city": "taubate"
+	}, {
+		"number": 143, 
+		"name": "G.E. Taubaté - 143º/SP", 
+		"logoUrl": "http://www.escoteiros.org.br/images/grupos_escoteiros/SP143.jpg",
+		"foundation": "18/07/1993", 
+		"address": "Rua Espanha S/N, Jardim das Nações, Taubaté",
+		"phone": "(12) 3621-4545",
+		"workTime": "Sábados - das 14:30h às 17:00h",
+		"siteUrl": "http://www.getaubate.com.br/",
+		"email": "marichetto@yahoo.com.br",
+		"city": "taubate"
+	}, {
+		"number": 157, 
+		"name": "T.S.A. Abaetê - 157º/SP", 
+		"logoUrl": "http://www.escoteiros.org.br/images/grupos_escoteiros/SP157.jpg",
+		"foundation": "21/04/2012", 
+		"address": "Av. Independência,247 - Jaboticabeira - Taubaté (Dentro do 5º BPMI)",
+		"phone": "(12) 3011-1551",
+		"workTime": "Sábados - das 14:00h às 18:00h",
+		"siteUrl": "http://www.facebook.com/tsa.abaete",
+		"email": "seniorabaete@gmail.com",
+		"city": "taubate" 
+	}, {
+		"number": 219,
+		"name": "G.E. Aldo Chioratto - 219º/SP",
+		"logoUrl": "images/groups/SP219.png",
+		"foundation": "01/02/1997", 
+		"address": "Rua Renato Braga,1290 - Estiva - Taubaté ( Dentro da Escola Municipal Dr. Quirino)",
+		"phone": "(12) 3632-3484 ou 99124-1616",
+		"workTime": "Sábados - das 14:30h às 17:00h",
+		"siteUrl": "http://www.facebook.com/AldoChioratto",
+		"email": "http://br.f538.mail.yahoo.com/ym/Compose?To=andressaszal@hotmail.com",
+		"city": "taubate"
+	}, {
+		"number": 223,
+		"name": "G.E. Guaypacaré - 223º/SP",
+		"logoUrl": "http://www.escoteiros.org.br/images/grupos_escoteiros/SP223.jpg",
+		"foundation": "07/09/1971", 
+		"address": "Rua General Eduardo Areco, 832 - Vila Geny - Lorena",
+		"phone": "(12) 3153-1595",
+		"workTime": "Sábados - das 14:30h às 17:30h",
+		"siteUrl": "http://https//www.facebook.com/groups/g.e.guaypacare223",
+		"email": "geguaypacare@gmail.com",
+		"city": "lorena"
+	}, {
+		"number": 259,
+		"name": "G.E. do Ar Aviação do Exército - 259º/SP",
+		"logoUrl": "http://www.escoteiros.org.br/images/grupos_escoteiros/SP259.jpg",
+		"foundation": "21/06/1997", 
+		"address": "Estrada dos Remédios, 2135 - Itaim - Taubaté (Dentro da Base do Exército)",
+		"phone": "(12) 3622-2804",
+		"workTime": "Sábados - das 14:30h às 17:00h",
+		"siteUrl": "http://https//groups.google.com/group/geaavex?hl=pt-br",
+		"email": "jfernandolmachado@yahoo.com.br",
+		"city": "taubate"
+	}, {
+		"number": 268,
+		"name": "G.E. Caçapava - 268º/SP",
+		"logoUrl": "http://www.escoteiros.org.br/images/grupos_escoteiros/SP268.jpg",
+		"foundation": "01/09/2002", 
+		"address": "Avenida Doutor José de Moura Resende, 475 - Vera Cruz - Caçapava (Dentro do Centro Cultural)",
+		"phone": "(12) 99790-9373",
+		"workTime": "Sábados - das 14:30h às 17:30h",
+		"siteUrl": "http://facebook.com/gecacapava",
+		"email": "gecacapava@gmail.com",
+		"city": "cacapava"
+	}, {
+		"number": 290,
+		"name": "G.E. Trapistas - 290º/SP",
+		"logoUrl": "http://www.escoteiros.org.br/images/grupos_escoteiros/SP290.jpg",
+		"foundation": "25/08/2009", 
+		"address": "Rua Poços de Caldas s/n - Tremembé (Dentro do Horto Municipal Duilio Iori)",
+		"phone": "(12) 3672-4589",
+		"workTime": "Sábados - das 14:00h às 17:00",
+		"siteUrl": "http://distrito35.herokuapp.com/#/grupo/290",
+		"email": "delcio.alves.oliveira@itelefonica.com.br",
+		"city": "tremembe"
+	}, {
+		"number": 310,
+		"name": "G.E. Kimball O'hara - 310º/SP",
+		"logoUrl": "images/groups/SP310.png",
+		"foundation": "22/05/2004", 
+		"address": "Rua José de Paula Lico, 247 - Cecap - Taubaté (Posto de Distribuição de Remédio)",
+		"phone": "(12) 3622-5548",
+		"workTime": "Sábados - das 14:30h às 17:00h",
+		"siteUrl": "http://www.kimball-ohara.org/",
+		"email": "diretoria@kimball-ohara.org ",
+		"city": "taubate"
+	}, {
+		"number": 313,
+		"name": "G.E. do Ar Brasil - 313º/SP",
+		"logoUrl": "http://www.escoteiros.org.br/images/grupos_escoteiros/SP313.jpg",
+		"foundation": "22/09/2004", 
+		"address": "Rua Visconde do Sabugosa, 231 - Chácara do Visconde - Taubaté (Ao lado do Sítio do Pica Pau Amarelo",
+		"phone": "(12) 3682-1488",
+		"workTime": "Sábados - das 14:30h às 17:00h",
+		"siteUrl": "http://www.gearbrasil.org.br",
+		"email": "gearbrasil@gearbrasil.org.br",
+		"city": "taubate"
+	}, {
+		"number": 353,
+		"name": "G.E. Evangélico Lerru - 353º/SP",
+		"logoUrl": "http://www.escoteiros.org.br/images/grupos_escoteiros/SP353.jpg",
+		"foundation": "02/10/2011", 
+		"address": " Rua Alice Gonçalvez dos Santos, 52- Centro - Tremembé",
+		"phone": " (12) 3674-3593 ou 98132-6201 ",
+		"workTime": "Sábados - das 14:45h às 17:00h",
+		"siteUrl": "http://www.facebook.com/pages/GE-LERRU-evangélico/465132100200312",
+		"email": "wi.lale2010@hotmail.com",
+		"city": "tremembe"
+	}
+]

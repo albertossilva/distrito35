@@ -53,7 +53,7 @@ HttpServer.prototype.parseUrl_ = function(urlString) {
 		parsed.pathname = 'index.html';
 	}
 
-	if(! /\.(txt|html|css|xml|json|js|jpg|jpeg|gif|png|svg)$/.test(parsed.pathname)) {
+	if(! /\.(txt|html|css|xml|json|js|jpg|jpeg|gif|png|svg|ico|map)$/.test(parsed.pathname)) {
 		parsed.pathname += '/index.html';
 	}
 
@@ -87,16 +87,18 @@ function StaticServlet() {}
 
 StaticServlet.MimeMap = {
 	'txt': 'text/plain',
-	'html': 'text/html',
-	'css': 'text/css',
+	'html': 'text/html; charset=utf-8',
+	'css': 'text/css; charset=utf-8',
 	'xml': 'application/xml',
-	'json': 'application/json',
-	'js': 'application/javascript',
+	'map': 'text/plain; charset=utf-8',
+	'json': 'application/json; charset=utf-8',
+	'js': 'application/javascript; charset=utf-8',
 	'jpg': 'image/jpeg',
 	'jpeg': 'image/jpeg',
 	'gif': 'image/gif',
 	'png': 'image/png',
-  'svg': 'image/svg+xml'
+	'ico': 'image/x-icon',
+	'svg': 'image/svg+xml'
 };
 
 StaticServlet.prototype.handleRequest = function(req, res) {

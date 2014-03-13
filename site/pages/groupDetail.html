@@ -1,0 +1,41 @@
+<br/>
+<div id="row clearfix">
+	<div class="col-md-12 column">
+		<ul class="breadcrumb">
+			<li>
+				Você está em: <a href="#/home" title="Página Inicial" accesskey="H">Página Inicial</a>
+			</li>
+			<li>
+				<a href="#/grupos" title="Grupos" accesskey="G">Grupos</a>
+			</li>
+			<li class="active">
+				{{ group.name }}
+			</li>
+		</ul>
+	</div>
+
+	<div class="col-md-2 column submenu">
+		<a href="#/grupos" title="Grupos do 35º Distrito Escoteiro" class="nivel1">Todos os Grupos</a>
+		<div class="hr">&nbsp;</div>
+		<a href="#/grupos/cacapava" title="Grupos em Caçapava" class="nivel1">Em Caçapava</a>
+		<div class="hr">&nbsp;</div>
+		<a href="#/grupos/lorena" title="Grupos em Lorena" class="nivel1">Em Lorena</a>
+		<div class="hr">&nbsp;</div>
+		<a href="#/grupos/taubate" title="Grupos em Taubaté" class="nivel1">Em Taubaté</a>
+		<div class="hr">&nbsp;</div>
+		<a href="#/grupos/tremembe" title="Grupos em Tremembé" class="nivel1">Em Tremembé</a>
+	</div>
+
+	<div class="col-md-10 column main-content">
+		<p><a href="{{ group.siteUrl }}"><img src="{{ group.logoUrl }}" title="{{ group.name }}" /></a></p>
+		<h4>{{ group.name }}</h4>
+		<div class="group-data">
+			<p><span class="label-field">Fundação</span>: {{ group.foundation }}</p>
+			<p><span class="label-field">Endereço </span>: {{ group.address }}</p>
+			<p><span class="label-field">Atividades </span>: {{ group.workTime }}</p>
+			<p><span class="label-field">Site </span>: <a href="{{ group.siteUrl }}" target="_blank" title="Ir ao Site">{{ group.siteUrl }} </a></p>
+			<p><span class="label-field">E-mail </span>: <a href="mailto:{{ group.email }}" title="Entrar em contato">{{ group.email }} </a></p>
+			<p><span class="label-field">Telefone </span>: {{ group.phone }}</p>
+		</div>
+	</div>
+</div>

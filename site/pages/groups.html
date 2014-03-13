@@ -1,0 +1,38 @@
+<br/>
+<div id="row clearfix">
+	<div class="col-md-12 column">
+		<ul class="breadcrumb">
+			<li>
+				Você está em: <a href="#/home" title="Página Inicial" accesskey="H">Página Inicial</a>
+			</li>
+			<li class="active">
+				Grupos
+			</li>
+		</ul>
+	</div>
+
+	<div class="col-md-2 column submenu">
+		<a href="#/grupos" title="Grupos do 35º Distrito Escoteiro" class="nivel1">Todos os Grupos</a>
+		<div class="hr">&nbsp;</div>
+		<a href="#/grupos/cacapava" title="Grupos em Caçapava" class="nivel1">Em Caçapava</a>
+		<div class="hr">&nbsp;</div>
+		<a href="#/grupos/lorena" title="Grupos em Lorena" class="nivel1">Em Lorena</a>
+		<div class="hr">&nbsp;</div>
+		<a href="#/grupos/taubate" title="Grupos em Taubaté" class="nivel1">Em Taubaté</a>
+		<div class="hr">&nbsp;</div>
+		<a href="#/grupos/tremembe" title="Grupos em Tremembé" class="nivel1">Em Tremembé</a>
+	</div>
+
+	<div class="col-md-10 column main-content">
+
+		<h2>{{ title }}</h2>
+		<p>Lista de {{ subtitle }} :</p>
+		<ul class="groups">
+			<li ng-repeat="group in groups | filter:query" class="thumbnail">
+				<a href="#/grupo/{{group.number}}" class="thumb"><img ng-src="{{group.logoUrl}}"></a>
+				<a href="#/grupo/{{group.number}}">{{group.name}}</a>
+			</li>
+		</ul>
+
+	</div>
+</div>
