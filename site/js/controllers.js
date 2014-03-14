@@ -108,5 +108,29 @@ distrito35Controllers.controller(
 		} else {
 			$scope.monthsSecondHalf = window.cache.calendarSecondHalf;
 		}
+
+		$('.calendar-legend div:not(.legend)').click(function(){
+			var checkbox = $(this).find('span');
+			var className = checkbox[0].className.split(' ')[1];
+			var events = $('.calendar .' + className);
+			var legends = $('.calendar-legend .' + className);
+			if(checkbox.html() == 'X') {
+				events.hide('500');
+				events.attr('rel', "hide");
+				legends.html('&nbsp;');
+			} else {
+				events.attr('rel', "show");
+				events.show('500');
+				legends.html('X');
+			}
+			$('.month').each(function(_, el) {
+				var month = $(el);
+				if( month.find('.event[rel=show]').length == 0) {
+					month.hide(500);
+				} else {
+					month.show(500);
+				}
+			});
+		});
 	}]
 );

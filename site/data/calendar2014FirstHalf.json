@@ -68,7 +68,7 @@
 		"weekendOne": {
 			"name": "01",
 			"events": [{
-				"type": "other",
+				"type": "holiday",
 				"description": "Carnaval"
 			}]
 		},
@@ -151,7 +151,7 @@
 		"weekendTwo": {
 			"name": "10",
 			"events": [{
-				"type": "other",
+				"type": "holiday",
 				"description": "Dias das Mães"
 			}]
 		},
@@ -198,11 +198,17 @@
 		},
 		"weekendThree": {
 			"name": "21",
-			"events": []
+			"events": [{
+				"type": "everyone",
+				"description": "19 a 22 Acampamento do Centenário do Escotismo Paulista - Barretos"
+			}]
 		},
 		"weekendFour": {
 			"name": "28",
-			"events": []
+			"events": [{
+				"type": "hover",
+				"description": "28 e 29 - Pré Vigília"
+			}]
 		},
 		"weekendFive": {
 			"name": "",

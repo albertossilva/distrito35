@@ -13,13 +13,13 @@
 		"photoUrl": "images/team/gu.png"
 	}, {
 		"name": "César Augusto", 
-		"function": "Coordenador Institucional e Crescimento",
+		"function": "Coordenador de Gestão Institucional e Crescimento",
 		"type": "director",
 		"email": "c.reche@bol.com.br",
 		"photoUrl": "images/team/cesar.png"
 	}, {
 		"name": "Marco Castro (Cachorrão)", 
-		"function": "Coordenador Relações Institucionais",
+		"function": "Coordenador Relações Institucionais e Públicas",
 		"type": "director",
 		"email": "marco.castro@geamizage.org.br",
 		"photoUrl": "images/team/cachorrao.png"
@@ -53,5 +53,23 @@
 		"type": "hover",
 		"email": "mestrechill@hotmail.com",
 		"photoUrl": "images/team/chill.png"
+	}, {
+		"name": "Paulo Rico", 
+		"function": "Coordenador de Radio Escotismo",
+		"type": "director",
+		"email": "ch.paulorico@yahoo.com.br",
+		"photoUrl": "images/team/paulorico.png"
+	}, {
+		"name": "Nelson Gomes", 
+		"function": "Coordenador da Modalidade do Ar",
+		"type": "director",
+		"email": "anelsonog@ig.com.br",
+		"photoUrl": "images/team/nelson.png"
+	}, {
+		"name": "Laís Nunes", 
+		"function": "Coordenador da Comunicação",
+		"type": "director",
+		"email": "",
+		"photoUrl": "images/team/lais.png"
 	}
 ]

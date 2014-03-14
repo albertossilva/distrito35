@@ -14,6 +14,8 @@ a, a:hover { color: #004289; text-decoration:none; }
 .top-menu a {	color: #FFF; padding: 5px }
 
 .banner { height: 95px }
+.share-button { position: absolute; top: 40px; left: 80%; }
+
 
 .links-on-content a {
 	display: block;
@@ -63,6 +65,8 @@ a, a:hover { color: #004289; text-decoration:none; }
 }
 .menu li.selected a, .menu li:hover a { color:#fff; border-right-color: rgba(0,0,0,0) }
 
+.main-content {font-size: 120%}
+
 .main-content h2{ text-transform: uppercase }
 
 .main-content h4.subtitle{ color: #777777 }
@@ -104,8 +108,8 @@ a, a:hover { color: #004289; text-decoration:none; }
 	margin: 4px;
 }
 
-.groups .thumbnail a {margin-top: 4px; display: inline-block; color: #004289; font-size: 120% }
-.group-data { font-size: 120% }
+.groups .thumbnail a {margin-top: 4px; display: inline-block; color: #004289 }
+.group-data { font-size: 100% }
 .group-data .label-field { display: inline-block; width: 65px }
 .group-data a { text-decoration: underline }
 
@@ -140,7 +144,7 @@ a, a:hover { color: #004289; text-decoration:none; }
 
 .team-member.director img { border-color: #26d5d3 }
 .team-member.wolf img { border-color: #EEEE00 }
-.team-member.scout img { border-color: #00CC00 }
+.team-member.scout img { border-color: #00783A }
 .team-member.senior img { border-color: #821e3f }
 .team-member.hover img { border-color: #CC0000 }
 
@@ -186,7 +190,7 @@ a, a:hover { color: #004289; text-decoration:none; }
 	font-size: 110%
 }
 .calendar .month .month-content .content td { height: 104px; border-top: 1px solid #CCCCCC; border-bottom: none }
-.calendar .month .month-content .content td .event {
+.event {
 	display: inline-block;
 	border-radius: 6px;
 	padding: 2px 4px;
@@ -194,7 +198,7 @@ a, a:hover { color: #004289; text-decoration:none; }
 	margin: 6px;
 }
 
-.calendar .month .month-content .content td .event.wolf {
+.event.wolf {
 	color: #000;
 	background: #AA0;
 	border-radius: 5px;
@@ -207,7 +211,7 @@ a, a:hover { color: #004289; text-decoration:none; }
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FF0', endColorstr='#AA0',GradientType=0);
 }
 
-.calendar .month .month-content .content td .event.scout {
+.event.scout {
 	color: #FFF;
 	background: #0D0;
 	border-radius: 5px;
@@ -220,7 +224,7 @@ a, a:hover { color: #004289; text-decoration:none; }
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#0D0', endColorstr='#009900',GradientType=0);
 }
 
-.calendar .month .month-content .content td .event.senior {
+.event.senior {
 	color: #FFF;
 	background: #a6274f;
 	border-radius: 5px;
@@ -233,7 +237,7 @@ a, a:hover { color: #004289; text-decoration:none; }
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#a6274f', endColorstr='#651830',GradientType=0);
 }
 
-.calendar .month .month-content .content td .event.hover {
+.event.hover {
 	color: #FFF;
 	background: #D00;
 	border-radius: 5px;
@@ -246,7 +250,7 @@ a, a:hover { color: #004289; text-decoration:none; }
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#D00', endColorstr='#990000',GradientType=0);
 }
 
-.calendar .month .month-content .content td .event.boss {
+.event.boss {
 	color: #FFF;
 	background: #00D;
 	border-radius: 5px;
@@ -259,7 +263,7 @@ a, a:hover { color: #004289; text-decoration:none; }
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00D', endColorstr='#000099',GradientType=0);
 }
 
-.calendar .month .month-content .content td .event.everyone {
+.event.everyone {
 	color: #000;
 	background: #DDD;
 	border-radius: 5px;
@@ -272,9 +276,50 @@ a, a:hover { color: #004289; text-decoration:none; }
 	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#DDD', endColorstr='#999999',GradientType=0);
 }
 
-.calendar-legend { height: 10px; float: left; width: 100% }
+.event.other {
+	color: #FFF;
+	background: #222;
+	border-radius: 5px;
+	background: -moz-linear-gradient(top, #222 0%, #000 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#222), color-stop(100%,#000));
+	background: -webkit-linear-gradient(top, #222 0%,#000 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #222 0%,#000 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #222 0%,#000 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #222 0%,#000 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#222', endColorstr='#000',GradientType=0);
+}
 
+.event.air {
+	color: #000;
+	background: #FFF;
+	border-radius: 5px;
+	background: -moz-linear-gradient(top, #FFF 0%, #EEE 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF), color-stop(100%,#EEE));
+	background: -webkit-linear-gradient(top, #FFF 0%,#EEE 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #FFF 0%,#EEE 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #FFF 0%,#EEE 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #FFF 0%,#EEE 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#FFF', endColorstr='#EEE',GradientType=0);
+}
+
+.event.holiday {
+	color: #000;
+	background: #F60;
+	border-radius: 5px;
+	background: -moz-linear-gradient(top, #F60 0%, #EEE 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F60), color-stop(100%,#EEE));
+	background: -webkit-linear-gradient(top, #F60 0%,#EEE 100%); /* Chrome10+,Safari5.1+ */
+	background: -o-linear-gradient(top, #F60 0%,#EEE 100%); /* Opera 11.10+ */
+	background: -ms-linear-gradient(top, #F60 0%,#EEE 100%); /* IE10+ */
+	background: linear-gradient(to bottom, #F60 0%,#EEE 100%); /* W3C */
+	filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#F60', endColorstr='#EEE',GradientType=0);
+}
+
+.calendar-legend { float: left; width: 100%; padding: 8px; margin: 8px 0; border: 1px solid #CCC; }
+.calendar-legend div { float: left; padding: 4px 8px; background-color: #DDD; margin: 2px 0.25%; cursor: pointer; border-radius: 6px }
+.calendar-legend div.legend { width: 100%; cursor: text; background-color: transparent; }
+.calendar-legend div span {width: 16px;}
 
 @media print {
-	.menu, .top-menu, .banner, .breadcrumb, .footer, .submenu{ display: none }
+	.menu, .top-menu, .banner, .breadcrumb, .footer, .submenu, .calendar-legend{ display: none }
 }

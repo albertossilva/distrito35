@@ -15,13 +15,22 @@
 		},
 		"weekendFour": {
 			"name": "26",
-			"events": []
+			"events": [{
+				"type": "senior",
+				"description": "26 e 27 - Desafio Sênior"
+			}]
 		},
 		"weekendFive": {
 			"name": "",
 			"events": []
 		},
-		"observation": []
+		"observation": [{
+			"type": "other",
+			"description": "Revolução de 1922"	
+		}, {
+			"type": "other",
+			"description": "18 Aniversário do G.E. Taubaté"	
+		}]
 	}, {
 		"name": "Agosto",
 		"weekendOne": {
@@ -34,30 +43,48 @@
 		},
 		"weekendThree": {
 			"name": "16",
-			"events": []
+			"events": [{
+				"type": "senior",
+				"description": "26 e 27 Descida do Rio Paraíba"
+			}]
 		},
 		"weekendFour": {
 			"name": "23",
-			"events": []
+			"events": [{
+				"type": "hover",
+				"description": "Atividade de Clã - Lerru"
+			}]
 		},
 		"weekendFive": {
 			"name": "30",
-			"events": []
+			"events": [{
+				"type": "air",
+				"description": "31 2º Torneio de Avião de Papel"
+			}]
 		},
 		"observation": []
 	}, {
 		"name": "Setembro",
 		"weekendOne": {
 			"name": "06",
-			"events": []
+			"events": [{
+				"type": "everyone",
+				"description": "07 Desfile Cívico"
+			}]
 		},
 		"weekendTwo": {
 			"name": "13",
-			"events": []
+			"events": [{
+				"type": "everyone",
+				"description": "13 e 14 MUTCOM Distrital"
+			}]
 		},
 		"weekendThree": {
 			"name": "20",
-			"events": []
+			"events": [{
+				"type": "hover",
+				"description": "Atividade de Clã - G.E.A.Av.Ex."
+			}]
 		},
 		"weekendFour": {
 			"name": "27",
@@ -80,11 +107,17 @@
 		},
 		"weekendThree": {
 			"name": "18",
-			"events": []
+			"events": [{
+				"type": "everyone",
+				"description": "17 a 19 JOTA / JOTI"
+			}]
 		},
 		"weekendFour": {
 			"name": "25",
-			"events": []
+			"events": [{
+				"type": "hover",
+				"description": "Atividade de Clã - Kimball"
+			}]
 		},
 		"weekendFive": {
 			"name": "",
@@ -107,11 +140,23 @@
 		},
 		"weekendFour": {
 			"name": "22",
-			"events": []
+			"events": [{
+				"type": "wolf",
+				"description": "27 Confraternização das Alcatéias"
+			}, {
+				"type": "hover",
+				"description": "DRACOPIO"
+			}]
 		},
 		"weekendFive": {
 			"name": "29",
-			"events": []
+			"events": [{
+				"type": "senior",
+				"description": "28 Confraternização do Ramo Sênior"
+			}, {
+				"type": "hover",
+				"description": "Atividade de Clã - Caçapava"
+			}]
 		},
 		"observation": []
 	}, {
@@ -122,7 +167,10 @@
 		},
 		"weekendTwo": {
 			"name": "13",
-			"events": []
+			"events": [{
+				"type": "hover",
+				"description": "Confraternização - Redenção da Serra"
+			}]
 		},
 		"weekendThree": {
 			"name": "20",

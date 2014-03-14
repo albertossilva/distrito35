@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="en" ng-app="distrito35">
+<html lang="pt-br" ng-app="distrito35" xmlns:fb="http://ogp.me/ns/fb#">
 
 	<head>
 		<title>35º D.E./SP - Monteiro Lobato - Escoteiros do Brasil - Educação e lazer para crianças e jovens</title>
@@ -23,15 +23,22 @@
 	</head>
 
 	<body>
-
+		<div id="fb-root"></div>
+		<script>(function(d, s, id) {
+			var js, fjs = d.getElementsByTagName(s)[0];
+			if (d.getElementById(id)) return;
+			js = d.createElement(s); js.id = id;
+			js.src = "//connect.facebook.net/en_US/all.js#xfbml=1";
+			fjs.parentNode.insertBefore(js, fjs);
+			}(document, 'script', 'facebook-jssdk'));
+		</script>
 		<div class="container-fluid top-menu">
 			<div class="clearfix">
 				<div class="col-md-8 col-md-offset-2 column text-right">
 					<a href="http://www.escoteiros.org.br" title="Site da Nacional" class="external">Escoteiros do Brasil</a> |
 					<a href="http://www.escotismo.org.br" title="Site da Regional" class="external">Site da Região São Paulo</a> |
 					<a href="http://sigue.escoteiros.org.br/siguejovem/" title="SIGUE Jovem" class="external">SIGUE Jovem</a> |
-					<a href="http://sigue.escoteiros.org.br/sigue" title="SIGUE Administrativo" class="external">SIGUE Administrativo</a> |
-					<a href="#/contato" title="Contato">Contato</a>
+					<a href="http://sigue.escoteiros.org.br/sigue" title="SIGUE Administrativo" class="external">SIGUE Administrativo</a>
 				</div>
 			</div>
 		</div>
@@ -41,6 +48,9 @@
 					<div class="col-md-12 column banner">
 						<a href="#/home" title="Voltar a página inicial do site dos Escoteiros do Brasil" accesskey="H"><img src="images/banner.png" title="35º Distrito Escoteiro" height="90" /></a>
 						<h1 class="hidden">Escoteiros do Brasil</h1>
+					</div>
+					<div class="share-button">
+						<fb:share-button href="https://distrito35.herokuapp.com" type="button_count"></fb:share-button>
 					</div>
 			</div>
 			<div class="row clearfix">
