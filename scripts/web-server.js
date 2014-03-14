@@ -1,10 +1,13 @@
 #!/usr/bin/env node
 
+
+
 var util = require('util'),
 		http = require('http'),
 		fs = require('fs'),
 		url = require('url'),
-		events = require('events');
+		events = require('events'),
+		zlib = require('zlib');
 
 var DEFAULT_PORT = 8000;
 
@@ -44,7 +47,7 @@ function HttpServer(handlers) {
 HttpServer.prototype.start = function(port) {
 	this.port = port;
 	this.server.listen(port);
-	console.log('Http Server running at http://localhost:' + port + '/');
+	//console.log('Http Server running at http://localhost:' + port + '/');
 };
 
 HttpServer.prototype.parseUrl_ = function(urlString) {
@@ -69,7 +72,7 @@ HttpServer.prototype.handleRequest_ = function(req, res) {
 	if (req.headers['user-agent']) {
 		logEntry += ' ' + req.headers['user-agent'];
 	}
-	console.log(logEntry);
+	//console.log(logEntry);
 	req.url = this.parseUrl_(req.url);
 	var handler = this.handlers[req.method];
 	if (!handler) {
@@ -183,20 +186,27 @@ StaticServlet.prototype.sendRedirect_ = function(req, res, redirectUrl) {
 StaticServlet.prototype.sendFile_ = function(req, res, path) {
 	var self = this;
 	var file = fs.createReadStream(path);
-	res.writeHead(200, {
-		'Content-Type': StaticServlet.
-			MimeMap[path.split('.').pop()] || 'text/plain'
-	});
+	var headers = {
+		'Content-Type': StaticServlet.MimeMap[path.split('.').pop()] || 'text/plain',
+		'Content-Encoding': 'gzip'
+	};
+	if(/\.(txt|html|css|xml|js|jpg|jpeg|gif|png|svg|ico|map)$/.test(path)) {
+		headers['Cache-Control'] = 'public, max-age=' + (30 * 24 * 3600000);
+	}
+	res.writeHead(200, headers);
 	if (req.method === 'HEAD') {
 		res.end();
 	} else {
+		file.pipe( zlib.createGzip() ).pipe(res);
+		//console.log(path);
+		/*/
 		file.on('data', res.write.bind(res));
 		file.on('close', function() {
 			res.end();
 		});
 		file.on('error', function(error) {
 			self.sendError_(req, res, error);
-		});
+		});*/
 	}
 };
 

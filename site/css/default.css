@@ -323,3 +323,7 @@ a, a:hover { color: #004289; text-decoration:none; }
 @media print {
 	.menu, .top-menu, .banner, .breadcrumb, .footer, .submenu, .calendar-legend, .share-button{ display: none }
 }
+
+@media screen and (max-width: 991px) {
+	.submenu {display: none}
+}
