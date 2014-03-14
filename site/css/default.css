@@ -321,5 +321,5 @@ a, a:hover { color: #004289; text-decoration:none; }
 .calendar-legend div span {width: 16px;}
 
 @media print {
-	.menu, .top-menu, .banner, .breadcrumb, .footer, .submenu, .calendar-legend{ display: none }
+	.menu, .top-menu, .banner, .breadcrumb, .footer, .submenu, .calendar-legend, .share-button{ display: none }
 }
