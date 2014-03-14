@@ -30,6 +30,9 @@ phonecatApp.config(['$routeProvider',
 			}).when('/calendario', {
 				templateUrl: 'pages/calendar.html',
 				controller: 'CalendarCtrl'
+			}).when('/downloads', {
+				templateUrl: 'pages/downloads.html',
+				controller: 'DownloadsCtrl'
 			}).otherwise({
 				redirectTo: '/home'
 			});

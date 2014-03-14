@@ -134,3 +134,24 @@ distrito35Controllers.controller(
 		});
 	}]
 );
+
+distrito35Controllers.controller(
+	'DownloadsCtrl', 
+	['$scope', '$routeParams', '$http',function($scope, $routeParams, $http) {
+		setActiveLink('downloads');
+
+		$scope.groups = window.cache.downloads;
+		$scope.search = '';
+
+		$scope.search = function() {
+			$scope.groups = window.cache.downloads;
+		}
+
+		if(window.cache.downloads === undefined) {
+			$http.get('data/downloads.json').success(function(downloadsData) {
+				window.cache.downloads = downloadsData;
+				$scope.downloads = downloadsData;
+			});
+		}
+	}]
+);
