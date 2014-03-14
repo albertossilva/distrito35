@@ -1,0 +1,30 @@
+<br/>
+<div id="row clearfix">
+	<div class="col-md-12 column">
+		<ul class="breadcrumb">
+			<li>
+				Você está em: <a href="#/home" title="Página Inicial" accesskey="H">Página Inicial</a>
+			</li>
+			<li class="active">
+				Equipe
+			</li>
+		</ul>
+	</div>
+
+	<div class="col-md-2 column submenu">
+		<a href="#/equipe" title="Equipe do 35º Distrito Escoteiro" class="nivel1">Equipe</a>
+		<div class="hr">&nbsp;</div>
+	</div>
+
+	<div class="col-md-10 column main-content">
+
+		<h2>Equipe do 35º Distrito Escoteiro</h2>
+		<div ng-repeat="member in team" class="team-member {{member.type}}">
+			<img ng-src="{{member.photoUrl}}" title="{{member.name}}"/>
+			<h4>{{member.name}}</h4>
+			<h5>{{member.function}}</h5>
+			<h5><a href="mailto:{{member.email}}" title="Entre em contato">{{member.email}}</a></h5>
+		</div>
+
+	</div>
+</div>

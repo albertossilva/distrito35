@@ -24,6 +24,12 @@ phonecatApp.config(['$routeProvider',
 			}).when('/grupo/:groupNumber', {
 				templateUrl: 'pages/groupDetail.html',
 				controller: 'GroupDetailCtrl'
+			}).when('/equipe', {
+				templateUrl: 'pages/team.html',
+				controller: 'TeamCtrl'
+			}).when('/calendario', {
+				templateUrl: 'pages/calendar.html',
+				controller: 'CalendarCtrl'
 			}).otherwise({
 				redirectTo: '/home'
 			});

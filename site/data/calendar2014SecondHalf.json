@@ -1,0 +1,141 @@
+[
+	{
+		"name": "Julho",
+		"weekendOne": {
+			"name": "05",
+			"events": []
+		},
+		"weekendTwo": {
+			"name": "12",
+			"events": []
+		},
+		"weekendThree": {
+			"name": "19",
+			"events": []
+		},
+		"weekendFour": {
+			"name": "26",
+			"events": []
+		},
+		"weekendFive": {
+			"name": "",
+			"events": []
+		},
+		"observation": []
+	}, {
+		"name": "Agosto",
+		"weekendOne": {
+			"name": "02",
+			"events": []
+		},
+		"weekendTwo": {
+			"name": "09",
+			"events": []
+		},
+		"weekendThree": {
+			"name": "16",
+			"events": []
+		},
+		"weekendFour": {
+			"name": "23",
+			"events": []
+		},
+		"weekendFive": {
+			"name": "30",
+			"events": []
+		},
+		"observation": []
+	}, {
+		"name": "Setembro",
+		"weekendOne": {
+			"name": "06",
+			"events": []
+		},
+		"weekendTwo": {
+			"name": "13",
+			"events": []
+		},
+		"weekendThree": {
+			"name": "20",
+			"events": []
+		},
+		"weekendFour": {
+			"name": "27",
+			"events": []
+		},
+		"weekendFive": {
+			"name": "",
+			"events": []
+		},
+		"observation": []
+	}, {
+		"name": "Outubro",
+		"weekendOne": {
+			"name": "04",
+			"events": []
+		},
+		"weekendTwo": {
+			"name": "11",
+			"events": []
+		},
+		"weekendThree": {
+			"name": "18",
+			"events": []
+		},
+		"weekendFour": {
+			"name": "25",
+			"events": []
+		},
+		"weekendFive": {
+			"name": "",
+			"events": []
+		},
+		"observation": []
+	}, {
+		"name": "Novembro",
+		"weekendOne": {
+			"name": "01",
+			"events": []
+		},
+		"weekendTwo": {
+			"name": "08",
+			"events": []
+		},
+		"weekendThree": {
+			"name": "15",
+			"events": []
+		},
+		"weekendFour": {
+			"name": "22",
+			"events": []
+		},
+		"weekendFive": {
+			"name": "29",
+			"events": []
+		},
+		"observation": []
+	}, {
+		"name": "Dezembro",
+		"weekendOne": {
+			"name": "06",
+			"events": []
+		},
+		"weekendTwo": {
+			"name": "13",
+			"events": []
+		},
+		"weekendThree": {
+			"name": "20",
+			"events": []
+		},
+		"weekendFour": {
+			"name": "27",
+			"events": []
+		},
+		"weekendFive": {
+			"name": "",
+			"events": []
+		},
+		"observation": []
+	}
+]

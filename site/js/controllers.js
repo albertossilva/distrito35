@@ -39,6 +39,7 @@ distrito35Controllers.controller(
 
 		if(window.cache.groups === undefined) {
 			$http.get('data/groups.json').success(function(groupsData) {
+				window.cache.groups = groupsData;
 				$scope.groups = groupsData;
 			});
 		}
@@ -64,6 +65,48 @@ distrito35Controllers.controller(
 				var group = $filter('filter')(groupsData, {number: $routeParams.groupNumber} )[0];
 				$scope.group = group;
 			});
+		} else {
+			var group = $filter('filter')(window.cache.groups, {number: $routeParams.groupNumber} )[0];
+			$scope.group = group;
+		}
+	}]
+);
+
+distrito35Controllers.controller(
+	'TeamCtrl', 
+	['$scope', '$http',function($scope, $http) {
+		setActiveLink('team');
+		if(window.cache.team === undefined) {
+			$http.get('data/team.json').success(function(teamData) {
+				window.cache.team = teamData;
+				$scope.team = teamData;
+			});
+		} else {
+			$scope.team = window.cache.team;
+		}
+	}]
+);
+
+distrito35Controllers.controller(
+	'CalendarCtrl', 
+	['$scope', '$http',function($scope, $http) {
+		setActiveLink('calendar');
+		if(window.cache.calendarFirstHalf === undefined) {
+			$http.get('data/calendar2014FirstHalf.json').success(function(calendarFirstHalfData) {
+				window.cache.calendarFirstHalf = calendarFirstHalfData;
+				$scope.monthsFirstHalf = calendarFirstHalfData;
+			});
+		} else {
+			$scope.monthsFirstHalf = window.cache.calendarFirstHalf;
+		}
+
+		if(window.cache.calendarSecondHalf === undefined) {
+			$http.get('data/calendar2014SecondHalf.json').success(function(calendarSecondHalfData) {
+				window.cache.calendarSecondHalf = calendarSecondHalfData;
+				$scope.monthsSecondHalf = calendarSecondHalfData;
+			});
+		} else {
+			$scope.monthsSecondHalf = window.cache.calendarSecondHalf;
 		}
 	}]
 );
