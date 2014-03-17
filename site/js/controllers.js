@@ -108,29 +108,46 @@ distrito35Controllers.controller(
 		} else {
 			$scope.monthsSecondHalf = window.cache.calendarSecondHalf;
 		}
-
-		$('.calendar-legend div:not(.legend)').click(function(){
+		var getSpanClassName = function(el) {
+			return el[0].className.split(' ')[1]
+		}
+		var legendsHandle = $('.calendar-legend div:not(.legend)');
+		legendsHandle.find('span').attr('rel','show');
+		var totalOfLegends = $('.calendar-legend:first span').length;
+		legendsHandle.click(function(){
 			var checkbox = $(this).find('span');
-			var className = checkbox[0].className.split(' ')[1];
-			var events = $('.calendar .' + className);
+			var className = getSpanClassName(checkbox);
 			var legends = $('.calendar-legend .' + className);
-			if(checkbox.html() == 'X') {
-				events.hide('500');
-				events.attr('rel', "hide");
-				legends.html('&nbsp;');
-			} else {
-				events.attr('rel', "show");
-				events.show('500');
+			if(checkbox.html() != 'X') {
 				legends.html('X');
+			} else {
+				legends.html('&nbsp;');
 			}
-			$('.month').each(function(_, el) {
-				var month = $(el);
-				if( month.find('.event[rel=show]').length == 0) {
-					month.hide(500);
-				} else {
-					month.show(500);
-				}
-			});
+			var legendsUnique = $('.calendar-legend:first span');
+			if( (legendsUnique.filter('[rel=hide]').length + 1) == totalOfLegends && checkbox.attr('rel') == 'show') {
+				$('.month').show(500);
+				$('.event').attr('rel', 'show').show(500);
+			} else {
+				var className, showValue, events;
+				legendsUnique.each(function(_, legend){
+					legend = $(legend);
+					className = getSpanClassName(legend);
+					showValue = legend.html() == 'X' ? 'show' : 'hide';
+					events = $('.calendar .' + className);
+					events.attr('rel', showValue);
+					legendsHandle.find('span.' + className).attr('rel',showValue);
+					events[showValue](500);
+				});
+
+				$('.month').each(function(_, el) {
+					var month = $(el);
+					if( month.find('.event[rel=show]').length == 0) {
+						month.hide(500);
+					} else {
+						month.show(500);
+					}
+				});
+			}
 		});
 	}]
 );

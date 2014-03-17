@@ -1,6 +1,6 @@
 [
 	{
-		"name": "Julho",
+		"name": "Jul",
 		"weekendOne": {
 			"name": "05",
 			"events": []
@@ -32,7 +32,7 @@
 			"description": "18 Aniversário do G.E. Taubaté"	
 		}]
 	}, {
-		"name": "Agosto",
+		"name": "Ago",
 		"weekendOne": {
 			"name": "02",
 			"events": []
@@ -64,7 +64,7 @@
 		},
 		"observation": []
 	}, {
-		"name": "Setembro",
+		"name": "Set",
 		"weekendOne": {
 			"name": "06",
 			"events": [{

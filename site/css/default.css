@@ -192,9 +192,10 @@ a, a:hover { color: #004289; text-decoration:none; }
 .calendar .month .month-content .content td { height: 104px; border-top: 1px solid #CCCCCC; border-bottom: none }
 .event {
 	display: inline-block;
+	box-shadow: 1px 1px 3px 1px rgba(40,40,40,0.4);
+	text-align: center;
 	border-radius: 6px;
 	padding: 2px 4px;
-	box-shadow: 1px 1px 3px 1px rgba(40,40,40,0.4);
 	margin: 6px;
 }
 

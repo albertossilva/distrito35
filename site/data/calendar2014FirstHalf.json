@@ -1,6 +1,6 @@
 [
 	{
-		"name": "Janeiro",
+		"name": "Jan",
 		"weekendOne": {
 			"name": "04",
 			"events": []
@@ -26,7 +26,7 @@
 		},
 		"observation": []
 	}, {
-		"name": "Fevereiro",
+		"name": "Fev",
 		"weekendOne": {
 			"name": "01",
 			"events": []
@@ -64,7 +64,7 @@
 			"description": "01 Aniversário G.E. Aldo Chioratto"
 		}]
 	}, {
-		"name": "Março",
+		"name": "Mar",
 		"weekendOne": {
 			"name": "01",
 			"events": [{
@@ -105,7 +105,7 @@
 		},
 		"observation": []
 	}, {
-		"name": "Abril",
+		"name": "Abr",
 		"weekendOne": {
 			"name": "05",
 			"events": [{
@@ -140,7 +140,7 @@
 			"description": "23 Homenagem Dia do Escoteiro"
 		}]
 	}, {
-		"name": "Maio",
+		"name": "Mai",
 		"weekendOne": {
 			"name": "03",
 			"events": [{
@@ -181,7 +181,7 @@
 		},
 		"observation": []
 	}, {
-		"name": "Junho",
+		"name": "Jun",
 		"weekendOne": {
 			"name": "07",
 			"events": [{
