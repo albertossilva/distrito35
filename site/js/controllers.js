@@ -108,6 +108,29 @@ distrito35Controllers.controller(
 		} else {
 			$scope.monthsSecondHalf = window.cache.calendarSecondHalf;
 		}
+
+		$('#btnFullScreen').click(function(){
+			var mainContent = $('.main-content');
+			mainContent.addClass('full-size');
+			$('<button>Voltar</button>')
+				.appendTo(mainContent)
+				.attr('id', 'btnReturnNormalSize')
+				.addClass('btn')
+				.addClass('btn-primary').click(function(){
+					var self = $(this);
+					self.remove();
+					mainContent.removeClass('full-size');
+				});
+			var escHandler = function(e, a){
+				if(e.keyCode == 27){
+					$('#btnReturnNormalSize').click();
+					$(document).unbind("keydown", escHandler);
+					return false;
+				}
+			};
+			$(document).bind("keydown", escHandler);
+		});
+
 		var getSpanClassName = function(el) {
 			return el[0].className.split(' ')[1]
 		}

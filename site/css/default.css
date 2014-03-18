@@ -151,30 +151,8 @@ a, a:hover { color: #004289; text-decoration:none; }
 .calendar { width: 100%; border: 1px solid #CCCCCC; float: left; color: #000; }
 .calendar div {border: 1px solid #CCCCCC; float: left; overflow: hidden; text-align: center }
 .calendar .max-header, .calendar .month, .calendar .month .month-content .header, .calendar .month .month-content .content{ width: 100% }
-.calendar .max-header { font-size: 130%; font-weight: bold; background-color: #CCCCCC; color: #000 }
-.calendar .month .month-name { width: 20px; height: 100%; border: 1px solid #CCCCCC; overflow: hidden; background-color: #CCCCCC }
-.calendar .month .month-name .text{
-	display: block;
-	border: none;
-	width: 100px;
-	height: 20px;
-	transform: rotate(-90deg) translateX(-50px);
-	-moz-transform: rotate(-90deg) translateX(-50px); 
-    -webkit-transform: rotate(-90deg) translateX(-50px);
-    -o-transform: rotate(-90deg) translateX(-50px);
-    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+.calendar .max-header { font-size: 130%; font-weight: bold; background-color: #CCCCCC !important; color: #000 !important }
 
-    transform-origin: 0px 0px;
-    -webkit-transform-origin: 0px 0px;
-    -moz-transform-origin: 0px 0px;
-    -o-transform-origin: 0px 0px;
-
-    line-height: 20px;
-    font-size: 110%;
-    color: #000;
-    font-weight: bold;
-    position: absolute;
-}
 .calendar .month .month-content { height: 100%; border: 1px solid #CCCCCC }
 .calendar .month, .calendar .month .month-content .content, .calendar .month .month-content .header { border: none; }
 
@@ -183,9 +161,9 @@ a, a:hover { color: #004289; text-decoration:none; }
 .calendar .month .month-content .header td, .calendar .month .month-content .content td { width: 16.6666%; border-left: 1px solid #CCCCCC; text-align: center }
 .calendar .month .month-content .header td {
 	height: 18px;
-	border-top: none;
+	border-left: none;
 	border-bottom: 1px solid #CCCCCC;
-	background-color: #DDD;
+	background-color: #DDD !important;
 	line-height: 18px;
 	font-size: 110%
 }
@@ -200,8 +178,8 @@ a, a:hover { color: #004289; text-decoration:none; }
 }
 
 .event.wolf {
-	color: #000;
-	background: #AA0;
+	color: #000 !important;
+	background: #AA0 !important;
 	border-radius: 5px;
 	background: -moz-linear-gradient(top, #FF0 0%, #AA0 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FF0), color-stop(100%,#AA0));
@@ -213,8 +191,8 @@ a, a:hover { color: #004289; text-decoration:none; }
 }
 
 .event.scout {
-	color: #FFF;
-	background: #0D0;
+	color: #FFF !important;
+	background: #0D0 !important;
 	border-radius: 5px;
 	background: -moz-linear-gradient(top, #0D0 0%, #009900 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0D0), color-stop(100%,#009900));
@@ -226,8 +204,8 @@ a, a:hover { color: #004289; text-decoration:none; }
 }
 
 .event.senior {
-	color: #FFF;
-	background: #a6274f;
+	color: #FFF !important;
+	background: #a6274f !important;
 	border-radius: 5px;
 	background: -moz-linear-gradient(top, #a6274f 0%, #651830 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a6274f), color-stop(100%,#651830));
@@ -239,8 +217,8 @@ a, a:hover { color: #004289; text-decoration:none; }
 }
 
 .event.hover {
-	color: #FFF;
-	background: #D00;
+	color: #FFF !important;
+	background: #D00 !important;
 	border-radius: 5px;
 	background: -moz-linear-gradient(top, #D00 0%, #990000 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#D00), color-stop(100%,#990000));
@@ -252,8 +230,8 @@ a, a:hover { color: #004289; text-decoration:none; }
 }
 
 .event.boss {
-	color: #FFF;
-	background: #00D;
+	color: #FFF !important;
+	background: #00D !important;
 	border-radius: 5px;
 	background: -moz-linear-gradient(top, #00D 0%, #000099 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00D), color-stop(100%,#000099));
@@ -265,8 +243,8 @@ a, a:hover { color: #004289; text-decoration:none; }
 }
 
 .event.everyone {
-	color: #000;
-	background: #DDD;
+	color: #000 !important;
+	background: #DDD !important;
 	border-radius: 5px;
 	background: -moz-linear-gradient(top, #DDD 0%, #999999 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#DDD), color-stop(100%,#999999));
@@ -278,8 +256,8 @@ a, a:hover { color: #004289; text-decoration:none; }
 }
 
 .event.other {
-	color: #FFF;
-	background: #222;
+	color: #FFF !important;
+	background: #222 !important;
 	border-radius: 5px;
 	background: -moz-linear-gradient(top, #222 0%, #000 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#222), color-stop(100%,#000));
@@ -291,8 +269,8 @@ a, a:hover { color: #004289; text-decoration:none; }
 }
 
 .event.air {
-	color: #000;
-	background: #FFF;
+	color: #000 !important;
+	background: #FFF !important;
 	border-radius: 5px;
 	background: -moz-linear-gradient(top, #FFF 0%, #EEE 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF), color-stop(100%,#EEE));
@@ -304,8 +282,8 @@ a, a:hover { color: #004289; text-decoration:none; }
 }
 
 .event.holiday {
-	color: #000;
-	background: #F60;
+	color: #000 !important;
+	background: #F60 !important;
 	border-radius: 5px;
 	background: -moz-linear-gradient(top, #F60 0%, #EEE 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F60), color-stop(100%,#EEE));
@@ -321,9 +299,33 @@ a, a:hover { color: #004289; text-decoration:none; }
 .calendar-legend div.legend { width: 100%; cursor: text; background-color: transparent; }
 .calendar-legend div span {width: 16px;}
 
+.btn-right-float { float: right; }
+
+.main-content.full-size {
+	position: fixed;
+	top: 0;
+	left: 0;
+	background-color: #FFF;
+	width: 100%;
+	bottom: 0;
+	right: 0;
+	overflow: auto;
+	z-index: 100;
+}
+
+.main-content.full-size .btn {
+	position: fixed;
+	top: 18px;
+	right: 42px;
+}
+
 @media print {
-	.menu, .top-menu, .banner, .breadcrumb, .footer, .submenu, .calendar-legend, .share-button{ display: none }
+	.menu, .top-menu, .banner, .breadcrumb, .footer,
+	.submenu, .calendar-legend, .share-button, .btn{ display: none }
 	.page-break { page-break-before:always; page-break-inside: avoid; margin-top: 8px}
+	.main-content.full-size { position: relative }
+	.event { -webkit-print-color-adjust: exact; }
+	.event.hover {background-color: #D00 }
 }
 
 @media screen and (max-width: 991px) {
