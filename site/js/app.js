@@ -24,7 +24,7 @@ phonecatApp.config(['$routeProvider',
 			}).when('/grupo/:groupNumber', {
 				templateUrl: 'pages/groupDetail.html',
 				controller: 'GroupDetailCtrl'
-			}).when('/equipe', {
+			}).when('/comissao-distrital', {
 				templateUrl: 'pages/team.html',
 				controller: 'TeamCtrl'
 			}).when('/calendario', {
