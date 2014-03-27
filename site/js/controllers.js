@@ -1,15 +1,40 @@
 'use strict';
 
-var distrito35Controllers = angular.module('distrito35Controllers', []);
+if(window.distrito35Controllers === undefined) {
+	window.distrito35Controllers = angular.module('distrito35Controllers', []);
+}
 window.cache = {};
 
-var setActiveLink = function(name) {
+window.setActiveLink = function(name) {
 	$('.menu li').removeClass('selected');
 	if(name != '') {
 		$('.menu a[rel=' + name + ']').parent().addClass('selected');
 	}
 }
 
+var handlerFullSizeButton = function(selector) {
+	$(selector).click(function(){
+		var mainContent = $('.main-content');
+		mainContent.addClass('full-size');
+		$('<button>Voltar</button>')
+			.appendTo(mainContent)
+			.attr('id', 'btnReturnNormalSize')
+			.addClass('btn')
+			.addClass('btn-primary').click(function(){
+				var self = $(this);
+				self.remove();
+				mainContent.removeClass('full-size');
+			});
+		var escHandler = function(e, a){
+			if(e.keyCode == 27){
+				$('#btnReturnNormalSize').click();
+				$(document).unbind("keydown", escHandler);
+				return false;
+			}
+		};
+		$(document).bind("keydown", escHandler);
+	});
+}
 
 distrito35Controllers.controller(
 	'HomeCtrl', 
@@ -87,91 +112,84 @@ distrito35Controllers.controller(
 	}]
 );
 
+var handleCalendar = function(counter, total) {
+	//if(counter != total) return;
+	var getSpanClassName = function(el) {
+		return el[0].className.split(' ')[1]
+	}
+	var legendsHandle = $('.calendar-legend div:not(.legend)');
+
+	legendsHandle.find('span').attr('rel','show');
+	var totalOfLegends = $('.calendar-legend:first span').length;
+	legendsHandle.click(function(){
+		var checkbox = $(this).find('span');
+		var className = getSpanClassName(checkbox);
+		var legends = $('.calendar-legend .' + className);
+		if(checkbox.html() != 'X') {
+			legends.html('X');
+		} else {
+			legends.html('&nbsp;');
+		}
+		var legendsUnique = $('.calendar-legend:first span');
+		if( (legendsUnique.filter('[rel=hide]').length + 1) == totalOfLegends && checkbox.attr('rel') == 'show') {
+			$('.month').show(500);
+			$('.event').attr('rel', 'show').show(500);
+		} else {
+			var className, showValue, events;
+			legendsUnique.each(function(_, legend){
+				legend = $(legend);
+				className = getSpanClassName(legend);
+				showValue = legend.html() == 'X' ? 'show' : 'hide';
+				events = $('.calendar .' + className);
+				events.attr('rel', showValue);
+				legendsHandle.find('span.' + className).attr('rel',showValue);
+				events[showValue](500);
+			});
+
+			$('.month').each(function(_, el) {
+				var month = $(el);
+				if( month.find('.event[rel=show]').length == 0) {
+					month.hide(500);
+				} else {
+					month.show(500);
+				}
+			});
+		}
+	});
+}
+
+window.cache.calendars = [];
+
 distrito35Controllers.controller(
 	'CalendarCtrl', 
 	['$scope', '$http',function($scope, $http) {
 		setActiveLink('calendar');
-		if(window.cache.calendarFirstHalf === undefined) {
-			$http.get('data/calendar2014FirstHalf.json').success(function(calendarFirstHalfData) {
-				window.cache.calendarFirstHalf = calendarFirstHalfData;
-				$scope.monthsFirstHalf = calendarFirstHalfData;
+		$scope.calendars = [];
+		if(window.cache.calendars[0] === undefined) {
+			$http.get('data/calendar2014FirstHalf.json').success(function(calendarData) {
+				window.cache.calendars[0] = {};
+				window.cache.calendars[0].months = calendarData;
+				$scope.calendars[0] = window.cache.calendars[0];
 			});
 		} else {
-			$scope.monthsFirstHalf = window.cache.calendarFirstHalf;
+			$scope.calendars[0] = window.cache.calendars[0];
 		}
 
-		if(window.cache.calendarSecondHalf === undefined) {
-			$http.get('data/calendar2014SecondHalf.json').success(function(calendarSecondHalfData) {
-				window.cache.calendarSecondHalf = calendarSecondHalfData;
-				$scope.monthsSecondHalf = calendarSecondHalfData;
+		if(window.cache.calendars[1] === undefined) {
+			$http.get('data/calendar2014SecondHalf.json').success(function(calendarData) {
+				window.cache.calendars[1] = {};
+				window.cache.calendars[1].months = calendarData;
+				$scope.calendars[1] = window.cache.calendars[1];
 			});
 		} else {
-			$scope.monthsSecondHalf = window.cache.calendarSecondHalf;
+			$scope.calendars[1] = window.cache.calendars[1];
 		}
-
-		$('#btnFullScreen').click(function(){
-			var mainContent = $('.main-content');
-			mainContent.addClass('full-size');
-			$('<button>Voltar</button>')
-				.appendTo(mainContent)
-				.attr('id', 'btnReturnNormalSize')
-				.addClass('btn')
-				.addClass('btn-primary').click(function(){
-					var self = $(this);
-					self.remove();
-					mainContent.removeClass('full-size');
-				});
-			var escHandler = function(e, a){
-				if(e.keyCode == 27){
-					$('#btnReturnNormalSize').click();
-					$(document).unbind("keydown", escHandler);
-					return false;
-				}
-			};
-			$(document).bind("keydown", escHandler);
+		$scope.$on('ngRepeatFinished', function(ngRepeatFinishedEvent) {
+			handleCalendar();
+			handlerFullSizeButton('#btnFullScreen');
 		});
 
-		var getSpanClassName = function(el) {
-			return el[0].className.split(' ')[1]
-		}
-		var legendsHandle = $('.calendar-legend div:not(.legend)');
-		legendsHandle.find('span').attr('rel','show');
-		var totalOfLegends = $('.calendar-legend:first span').length;
-		legendsHandle.click(function(){
-			var checkbox = $(this).find('span');
-			var className = getSpanClassName(checkbox);
-			var legends = $('.calendar-legend .' + className);
-			if(checkbox.html() != 'X') {
-				legends.html('X');
-			} else {
-				legends.html('&nbsp;');
-			}
-			var legendsUnique = $('.calendar-legend:first span');
-			if( (legendsUnique.filter('[rel=hide]').length + 1) == totalOfLegends && checkbox.attr('rel') == 'show') {
-				$('.month').show(500);
-				$('.event').attr('rel', 'show').show(500);
-			} else {
-				var className, showValue, events;
-				legendsUnique.each(function(_, legend){
-					legend = $(legend);
-					className = getSpanClassName(legend);
-					showValue = legend.html() == 'X' ? 'show' : 'hide';
-					events = $('.calendar .' + className);
-					events.attr('rel', showValue);
-					legendsHandle.find('span.' + className).attr('rel',showValue);
-					events[showValue](500);
-				});
-
-				$('.month').each(function(_, el) {
-					var month = $(el);
-					if( month.find('.event[rel=show]').length == 0) {
-						month.hide(500);
-					} else {
-						month.show(500);
-					}
-				});
-			}
-		});
+		
 	}]
 );
 
@@ -195,3 +213,16 @@ distrito35Controllers.controller(
 		}
 	}]
 );
+
+var module = distrito35Controllers.directive('onFinishRender', function ($timeout) {
+	return {
+		restrict: 'A',
+		link: function ($scope, element, attr) {
+			if($scope.$last === true) {
+				$timeout(function () {
+					$scope.$emit('ngRepeatFinished');
+				});
+			}
+		}
+	}
+});

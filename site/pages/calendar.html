@@ -1,5 +1,5 @@
 <br/>
-<div id="row clearfix">
+<div class="row clearfix float-left">
 	<div class="col-md-12 column">
 		<ul class="breadcrumb">
 			<li>
@@ -10,7 +10,8 @@
 			</li>
 		</ul>
 	</div>
-
+</div>
+<div class="row clearfix float-left content-box">
 	<div class="col-md-8 column">
 		<h3>Calendário 2014</h3>
 	</div>
@@ -19,136 +20,72 @@
 	</div>
 
 	<div class="col-md-12 column main-content">
-		
-		<div class="calendar-legend">
-			<div class="legend">Legenda (Clique para alternar a visibilidade dos eventos):</div>
-			<div><span class="event wolf">&nbsp;</span>Ramo Lobinho</div>
-			<div><span class="event scout">&nbsp;</span>Ramo Escoteiro</div>
-			<div><span class="event senior">&nbsp;</span>Ramo Sênior</div>
-			<div><span class="event hover">&nbsp;</span>Ramo Pioneiro</div>
-			<div><span class="event boss">&nbsp;</span>Adultos</div>
-			<div><span class="event everyone">&nbsp;</span>Geral</div>
-			<div><span class="event air">&nbsp;</span>Modalidade do Ar</div>
-			<div><span class="event other">&nbsp;</span>Outros</div>
-			<div><span class="event holiday">&nbsp;</span>Datas Especiais</div>
-		</div>
-		<div class="calendar">
-			<table class="month" ng-repeat="month in monthsFirstHalf">
-				<tr>
-					<td colspan="6" class="month-name max-header text-center">{{ month.name }}</td>
-				</tr>
-				<tr>
-					<td class="month-content">
-						<table>
-							<tr class="header">
-								<td>{{ month.weekendOne.name }}</td>
-								<td>{{ month.weekendTwo.name }}</td>
-								<td>{{ month.weekendThree.name }}</td>
-								<td>{{ month.weekendFour.name }}</td>
-								<td>{{ month.weekendFive.name }}</td>
-								<td>OBS</td>
-							</tr>
-							<tr class="content">
-								<td>
-									<span ng-repeat="event in month.weekendOne.events" rel="show" class="event {{ event.type }}">
-										{{ event.description }}
-									</span>
-								</td>
-								<td>
-									<span ng-repeat="event in month.weekendTwo.events" rel="show" class="event {{ event.type }}">
-										{{ event.description }}
-									</span>
-								</td>
-								<td>
-									<span ng-repeat="event in month.weekendThree.events" rel="show" class="event {{ event.type }}">
-										{{ event.description }}
-									</span>
-								</td>
-								<td>
-									<span ng-repeat="event in month.weekendFour.events" rel="show" class="event {{ event.type }}">
-										{{ event.description }}
-									</span>
-								</td>
-								<td>
-									<span ng-repeat="event in month.weekendFive.events" rel="show" class="event {{ event.type }}">
-										{{ event.description }}
-									</span>
-								</td>
-								<td>
-									<span ng-repeat="event in month.observation" rel="show" class="event {{ event.type }}">
-										{{ event.description }}
-									</span>
-								</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-			</table>
-		</div>
-		<div class="calendar-legend">
-			<div class="legend">Legenda (Clique para alternar a visibilidade dos eventos):</div>
-			<div><span class="event wolf">&nbsp;</span>Ramo Lobinho</div>
-			<div><span class="event scout">&nbsp;</span>Ramo Escoteiro</div>
-			<div><span class="event senior">&nbsp;</span>Ramo Sênior</div>
-			<div><span class="event hover">&nbsp;</span>Ramo Pioneiro</div>
-			<div><span class="event boss">&nbsp;</span>Adultos</div>
-			<div><span class="event everyone">&nbsp;</span>Geral</div>
-			<div><span class="event air">&nbsp;</span>Modalidade do Ar</div>
-			<div><span class="event other">&nbsp;</span>Outros</div>
-			<div><span class="event holiday">&nbsp;</span>Datas Especiais</div>
-		</div>
-		<div class="calendar page-break">
-			<table class="month" ng-repeat="month in monthsSecondHalf">
-				<tr>
-					<td colspan="6" class="month-name max-header text-center">{{ month.name }}</td>
-				</tr>
-				<tr>
-					<td class="month-content">
-						<table>
-							<tr class="header">
-								<td>{{ month.weekendOne.name }}</td>
-								<td>{{ month.weekendTwo.name }}</td>
-								<td>{{ month.weekendThree.name }}</td>
-								<td>{{ month.weekendFour.name }}</td>
-								<td>{{ month.weekendFive.name }}</td>
-								<td>OBS</td>
-							</tr>
-							<tr class="content">
-								<td>
-									<span ng-repeat="event in month.weekendOne.events" rel="show" class="event {{ event.type }}">
-										{{ event.description }}
-									</span>
-								</td>
-								<td>
-									<span ng-repeat="event in month.weekendTwo.events" rel="show" class="event {{ event.type }}">
-										{{ event.description }}
-									</span>
-								</td>
-								<td>
-									<span ng-repeat="event in month.weekendThree.events" rel="show" class="event {{ event.type }}">
-										{{ event.description }}
-									</span>
-								</td>
-								<td>
-									<span ng-repeat="event in month.weekendFour.events" rel="show" class="event {{ event.type }}">
-										{{ event.description }}
-									</span>
-								</td>
-								<td>
-									<span ng-repeat="event in month.weekendFive.events" rel="show" class="event {{ event.type }}">
-										{{ event.description }}
-									</span>
-								</td>
-								<td>
-									<span ng-repeat="event in month.observation" rel="show" class="event {{ event.type }}">
-										{{ event.description }}
-									</span>
-								</td>
-							</tr>
-						</table>
-					</td>
-				</tr>
-			</table>
+		<div ng-repeat="calendar in calendars" on-finish-render="layoutDone()">
+			<div class="calendar-legend">
+				<div class="legend">Legenda (Clique para alternar a visibilidade dos eventos):</div>
+				<div><span class="event wolf">&nbsp;</span>Ramo Lobinho</div>
+				<div><span class="event scout">&nbsp;</span>Ramo Escoteiro</div>
+				<div><span class="event senior">&nbsp;</span>Ramo Sênior</div>
+				<div><span class="event hover">&nbsp;</span>Ramo Pioneiro</div>
+				<div><span class="event boss">&nbsp;</span>Adultos</div>
+				<div><span class="event everyone">&nbsp;</span>Geral</div>
+				<div><span class="event air">&nbsp;</span>Modalidade do Ar</div>
+				<div><span class="event other">&nbsp;</span>Outros</div>
+				<div><span class="event holiday">&nbsp;</span>Datas Especiais</div>
+			</div>
+			<div class="calendar">
+				<table class="month" ng-repeat="month in calendar.months">
+					<tr>
+						<td colspan="6" class="month-name max-header text-center">{{ month.name }}</td>
+					</tr>
+					<tr>
+						<td class="month-content">
+							<table>
+								<tr class="header">
+									<td>{{ month.weekendOne.name }}</td>
+									<td>{{ month.weekendTwo.name }}</td>
+									<td>{{ month.weekendThree.name }}</td>
+									<td>{{ month.weekendFour.name }}</td>
+									<td>{{ month.weekendFive.name }}</td>
+									<td>OBS</td>
+								</tr>
+								<tr class="content">
+									<td>
+										<span ng-repeat="event in month.weekendOne.events" rel="show" class="event {{ event.type }}">
+											{{ event.description }}
+										</span>
+									</td>
+									<td>
+										<span ng-repeat="event in month.weekendTwo.events" rel="show" class="event {{ event.type }}">
+											{{ event.description }}
+										</span>
+									</td>
+									<td>
+										<span ng-repeat="event in month.weekendThree.events" rel="show" class="event {{ event.type }}">
+											{{ event.description }}
+										</span>
+									</td>
+									<td>
+										<span ng-repeat="event in month.weekendFour.events" rel="show" class="event {{ event.type }}">
+											{{ event.description }}
+										</span>
+									</td>
+									<td>
+										<span ng-repeat="event in month.weekendFive.events" rel="show" class="event {{ event.type }}">
+											{{ event.description }}
+										</span>
+									</td>
+									<td>
+										<span ng-repeat="event in month.observation" rel="show" class="event {{ event.type }}">
+											{{ event.description }}
+										</span>
+									</td>
+								</tr>
+							</table>
+						</td>
+					</tr>
+				</table>
+			</div>
 		</div>
 		<div class="calendar-legend">
 			<div class="legend">Legenda (Clique para alternar a visibilidade dos eventos):</div>

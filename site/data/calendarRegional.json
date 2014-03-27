@@ -1,0 +1,28 @@
+[
+	{
+		"date": "27/12/2013",
+		"finalDate": "04/01/2014",
+		"description": "II Moot Escoteiro Interamericano",
+		"place": "Osório/RS",
+		"target": "hover",
+		"type": "youth",
+		"organizationBy": "Nacional",
+		"modality": "non-specific"
+	}, {
+		"date": "08/01/2014",
+		"description": "Falecimento de Baden-Powell (1941), em Nairóbi/Quênia",
+		"place": "",
+		"target": "everyone",
+		"type": "especial-day",
+		"organizationBy": "International",
+		"modality": "non-specific"
+	}, {
+		"date": "01/02/2014",
+		"description": "Mutirão de Conscientização em Acessibilidade (MUCA) - início",
+		"place": "Descentralizado",
+		"target": "everyone",
+		"type": "youth",
+		"organizationBy": "Regional",
+		"modality": "non-specific"
+	}
+]

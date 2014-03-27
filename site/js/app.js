@@ -30,6 +30,9 @@ phonecatApp.config(['$routeProvider',
 			}).when('/calendario', {
 				templateUrl: 'pages/calendar.html',
 				controller: 'CalendarCtrl'
+			}).when('/calendario-regional', {
+				templateUrl: 'pages/calendar-region.html',
+				controller: 'CalendarRegionCtrl'
 			}).when('/downloads', {
 				templateUrl: 'pages/downloads.html',
 				controller: 'DownloadsCtrl'

@@ -17,9 +17,11 @@
 		<script language="JavaScript" type="text/javascript" src="js/lib/jquery.min.js"></script>
 		<script language="JavaScript" type="text/javascript" src="js/lib/angular.min.js"></script>
 		<script language="JavaScript" type="text/javascript" src="js/lib/angular-route.min.js"></script>
+		<script language="JavaScript" type="text/javascript" src="js/lib/moment.js"></script>
 		<script language="JavaScript" type="text/javascript" src="js/site.js"></script>
 		<script language="JavaScript" type="text/javascript" src="js/app.js"></script>
 		<script language="JavaScript" type="text/javascript" src="js/controllers.js"></script>
+		<script language="JavaScript" type="text/javascript" src="js/calendar-region-controller.js"></script>
 	</head>
 
 	<body>
@@ -58,9 +60,10 @@
 						<ul>
 							<li><a rel="district" href="#/distrito" title="Distrito" accesskey="D"><span class="shortcut">D</span>istrito</a></li>
 							<li><a rel="groups" href="#/grupos" title="Grupos" accesskey="G"><span class="shortcut">G</span>rupos</a></li>
-							<li><a rel="team" href="#/comissao-distrital" title="A Equipe" accesskey="E">C<span class="shortcut">o</span>missão Distrital</a></li>
+							<li><a rel="team" href="#/comissao-distrital" title="A Equipe" accesskey="O">C<span class="shortcut">o</span>missão Distrital</a></li>
 							<li class="last"><a rel="calendar" href="#/calendario" title="Calendário" accesskey="C"><span class="shortcut">C</span>alendário</a></li>
-							<li class="last hidden"><a rel="downloads" href="#/downloads" title="Downloads" accesskey="D"><span class="shortcut">D</span>ownloads</a></li>
+							<li style="display: none"><a rel="calendar-region" href="#/calendario-regional" title="Calendário" accesskey="C">Calendário <span class="shortcut">R</span>egional</a></li>
+							<li style="display: none"><a rel="downloads" href="#/downloads" title="Downloads" accesskey="D"><span class="shortcut">D</span>ownloads</a></li>
 						</ul>
 					</div>
 			</div>
@@ -75,10 +78,24 @@
 						(41) 3353-4732
 					</address>
 					<div class="col-md-6 column text-right" id="links">
-						<a href="#/distrito" title="Distrito" accesskey="D"><span class="shortcut">D</span>istrito</a>
-						<a href="#/grupos" title="Grupos" accesskey="G"><span class="shortcut">G</span>rupos</a>
-						<a href="#/comissao-distrital" title="A Equipe" >Comissão Distrital</a>
-						<a href="#/calendario" title="Calendário" accesskey="C"><span class="shortcut">C</span>alendário</a>
+						<a href="#/distrito" title="Distrito">
+							<span class="shortcut">D</span>istrito
+						</a>
+						<a href="#/grupos" title="Grupos">
+							<span class="shortcut">G</span>rupos
+						</a>
+						<a href="#/comissao-distrital" title="A Equipe" >
+							C<span class="shortcut">o</span>missão Distrital
+						</a>
+						<a href="#/calendario" title="Calendário">
+							<span class="shortcut">C</span>alendário
+						</a>
+						<a style="display: none" href="#/calendario-regional" title="Calendário Regional">
+							<span class="shortcut">C</span>alendário Regional
+						</a>
+						<a style="display: none" href="#/downloads" title="Downloads">
+							<span class="shortcut">D</span>ownloads
+						</a>
 					</div>
 					<div class="col-md-2 column">
 						<a href="http://www.scout.org" title="Organização Mundial do Movimento Escoteiro" class="external">
@@ -93,8 +110,8 @@
 			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 			})(window,document,'script','//www.google-analytics.com/analytics.js','ga');
 
-			ga('create', 'UA-48993108-1', 'distrito35.herokuapp.com');
-			ga('send', 'pageview');
+			//ga('create', 'UA-48993108-1', 'distrito35.herokuapp.com');
+			//ga('send', 'pageview');
 		</script>
 	</body>
 </html>

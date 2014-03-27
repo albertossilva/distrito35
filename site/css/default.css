@@ -14,8 +14,14 @@ a, a:hover { color: #004289; text-decoration:none; }
 .top-menu a {	color: #FFF; padding: 5px }
 
 .banner { height: 95px }
-.share-button { position: absolute; top: 40px; left: 80%; }
+.share-button { position: absolute; top: 40px; left: 80% }
+.float-left { float: left }
 
+.content-box {
+	border-radius: 6px;
+	padding: 8px 0;
+	background-color: rgba(255,255,255, 0.9)
+}
 
 .links-on-content a {
 	display: block;
@@ -148,7 +154,7 @@ a, a:hover { color: #004289; text-decoration:none; }
 .team-member.senior img { border-color: #821e3f }
 .team-member.hover img { border-color: #CC0000 }
 
-.calendar { width: 100%; border: 1px solid #CCCCCC; float: left; color: #000; }
+.calendar { width: 100%; float: left; color: #000; }
 .calendar div {border: 1px solid #CCCCCC; float: left; overflow: hidden; text-align: center }
 .calendar .max-header, .calendar .month, .calendar .month .month-content .header, .calendar .month .month-content .content{ width: 100% }
 .calendar .max-header { font-size: 130%; font-weight: bold; background-color: #CCCCCC !important; color: #000 !important }
@@ -156,7 +162,7 @@ a, a:hover { color: #004289; text-decoration:none; }
 .calendar .month .month-content { height: 100%; border: 1px solid #CCCCCC }
 .calendar .month, .calendar .month .month-content .content, .calendar .month .month-content .header { border: none; }
 
-.calendar .month { height: 102px }
+.calendar .month { height: 102px; border-right: 1px solid #CCC }
 .calendar .month .month-content table { width: 100%; }
 .calendar .month .month-content .header td, .calendar .month .month-content .content td { width: 16.6666%; border-left: 1px solid #CCCCCC; text-align: center }
 .calendar .month .month-content .header td {
@@ -172,7 +178,7 @@ a, a:hover { color: #004289; text-decoration:none; }
 	display: inline-block;
 	box-shadow: 1px 1px 3px 1px rgba(40,40,40,0.4);
 	text-align: center;
-	border-radius: 6px;
+	border-radius: 5px;
 	padding: 2px 4px;
 	margin: 6px;
 }
@@ -180,7 +186,6 @@ a, a:hover { color: #004289; text-decoration:none; }
 .event.wolf {
 	color: #000 !important;
 	background: #AA0;
-	border-radius: 5px;
 	background: -moz-linear-gradient(top, #FF0 0%, #AA0 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FF0), color-stop(100%,#AA0));
 	background: -webkit-linear-gradient(top, #FF0 0%,#AA0 100%); /* Chrome10+,Safari5.1+ */
@@ -193,7 +198,6 @@ a, a:hover { color: #004289; text-decoration:none; }
 .event.scout {
 	color: #FFF !important;
 	background: #0D0;
-	border-radius: 5px;
 	background: -moz-linear-gradient(top, #0D0 0%, #009900 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#0D0), color-stop(100%,#009900));
 	background: -webkit-linear-gradient(top, #0D0 0%,#009900 100%); /* Chrome10+,Safari5.1+ */
@@ -206,7 +210,6 @@ a, a:hover { color: #004289; text-decoration:none; }
 .event.senior {
 	color: #FFF !important;
 	background: #a6274f;
-	border-radius: 5px;
 	background: -moz-linear-gradient(top, #a6274f 0%, #651830 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#a6274f), color-stop(100%,#651830));
 	background: -webkit-linear-gradient(top, #a6274f 0%,#651830 100%); /* Chrome10+,Safari5.1+ */
@@ -219,7 +222,6 @@ a, a:hover { color: #004289; text-decoration:none; }
 .event.hover {
 	color: #FFF !important;
 	background: #D00;
-	border-radius: 5px;
 	background: -moz-linear-gradient(top, #D00 0%, #990000 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#D00), color-stop(100%,#990000));
 	background: -webkit-linear-gradient(top, #D00 0%,#990000 100%); /* Chrome10+,Safari5.1+ */
@@ -232,7 +234,6 @@ a, a:hover { color: #004289; text-decoration:none; }
 .event.boss {
 	color: #FFF !important;
 	background: #00D;
-	border-radius: 5px;
 	background: -moz-linear-gradient(top, #00D 0%, #000099 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#00D), color-stop(100%,#000099));
 	background: -webkit-linear-gradient(top, #00D 0%,#000099 100%); /* Chrome10+,Safari5.1+ */
@@ -245,7 +246,6 @@ a, a:hover { color: #004289; text-decoration:none; }
 .event.everyone {
 	color: #000 !important;
 	background: #DDD;
-	border-radius: 5px;
 	background: -moz-linear-gradient(top, #DDD 0%, #999999 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#DDD), color-stop(100%,#999999));
 	background: -webkit-linear-gradient(top, #DDD 0%,#999999 100%); /* Chrome10+,Safari5.1+ */
@@ -258,7 +258,6 @@ a, a:hover { color: #004289; text-decoration:none; }
 .event.other {
 	color: #FFF !important;
 	background: #222;
-	border-radius: 5px;
 	background: -moz-linear-gradient(top, #222 0%, #000 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#222), color-stop(100%,#000));
 	background: -webkit-linear-gradient(top, #222 0%,#000 100%); /* Chrome10+,Safari5.1+ */
@@ -271,7 +270,6 @@ a, a:hover { color: #004289; text-decoration:none; }
 .event.air {
 	color: #000 !important;
 	background: #FFF;
-	border-radius: 5px;
 	background: -moz-linear-gradient(top, #FFF 0%, #EEE 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#FFF), color-stop(100%,#EEE));
 	background: -webkit-linear-gradient(top, #FFF 0%,#EEE 100%); /* Chrome10+,Safari5.1+ */
@@ -284,7 +282,6 @@ a, a:hover { color: #004289; text-decoration:none; }
 .event.holiday {
 	color: #000 !important;
 	background: #F60;
-	border-radius: 5px;
 	background: -moz-linear-gradient(top, #F60 0%, #EEE 100%);
 	background: -webkit-gradient(linear, left top, left bottom, color-stop(0%,#F60), color-stop(100%,#EEE));
 	background: -webkit-linear-gradient(top, #F60 0%,#EEE 100%); /* Chrome10+,Safari5.1+ */
@@ -297,7 +294,7 @@ a, a:hover { color: #004289; text-decoration:none; }
 .calendar-legend { float: left; width: 100%; padding: 8px; margin: 8px 0; border: 1px solid #CCC; }
 .calendar-legend div { float: left; padding: 4px 8px; background-color: #DDD; margin: 2px 0.25%; cursor: pointer; border-radius: 6px }
 .calendar-legend div.legend { width: 100%; cursor: text; background-color: transparent; }
-.calendar-legend div span {width: 16px;}
+.calendar-legend div span {width: 18px;border-radius: 1px; border: 2px inset gray; padding: 0;}
 
 .btn-right-float { float: right; }
 
