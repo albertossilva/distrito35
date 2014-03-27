@@ -23,7 +23,7 @@ a, a:hover { color: #004289; text-decoration:none; }
 	background-color: rgba(255,255,255, 0.9)
 }
 
-.breadcumb { float: left; }
+.breadcrumb { float: left; }
 
 .links-on-content a {
 	display: block;
