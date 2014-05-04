@@ -15,10 +15,7 @@
 		},
 		"weekendFour": {
 			"name": "26",
-			"events": [{
-				"type": "senior",
-				"description": "26 e 27 - Desafio Sênior"
-			}]
+			"events": []
 		},
 		"weekendFive": {
 			"name": "",
