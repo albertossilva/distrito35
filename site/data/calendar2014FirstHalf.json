@@ -175,6 +175,9 @@
 		"weekendFive": {
 			"name": "31",
 			"events": [{
+				"type": "senior",
+				"description": "31 II Fórum Sênior/Guia"
+			}, {
 				"type": "hover",
 				"description": "31 e 01/06 Congresso Regional Pioneiro"
 			}]
