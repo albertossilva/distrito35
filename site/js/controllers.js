@@ -112,8 +112,14 @@ distrito35Controllers.controller(
 	}]
 );
 
+window.handledCalendar = false;
+
 var handleCalendar = function(counter, total) {
 	//if(counter != total) return;
+	if(window.handledCalendar) {
+		return;
+	}
+	window.handledCalendar = true;
 	var getSpanClassName = function(el) {
 		return el[0].className.split(' ')[1]
 	}
